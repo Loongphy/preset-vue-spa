@@ -1,0 +1,45 @@
+{
+  "name": "preset-vue-spa",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@8.15.4",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "up": "taze major",
+    "postinstall": "npx simple-git-hooks"
+  },
+  "dependencies": {
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.7.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vueuse/core": "^10.9.0",
+    "@vueuse/head": "^2.0.0",
+    "eslint": "^8.57.0",
+    "install": "^0.13.0",
+    "lint-staged": "^15.2.2",
+    "simple-git-hooks": "^2.9.0",
+    "taze": "^0.13.3",
+    "typescript": "^5.3.3",
+    "unocss": "^0.58.5",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0",
+    "unplugin-vue-router": "^0.8.4",
+    "vite": "^5.1.4",
+    "vite-plugin-vue-devtools": "^7.0.16",
+    "vite-plugin-vue-layouts": "^0.11.0",
+    "vue-router": "^4.3.0",
+    "vue-tsc": "^2.0.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
